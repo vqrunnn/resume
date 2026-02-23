@@ -1,0 +1,700 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Nadimpalli V L N Raju | Resume</title>
+  <meta name="description" content="Resume website for Nadimpalli V L N Raju — Finance & Business Analytics | BBA (Finance & International Business) | BBA (Digital Business & Entrepreneurship)." />
+  <meta name="theme-color" content="#e23744" />
+
+  <!-- Google Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+  <style>
+    :root{
+      --bg: #0b0b0d;
+      --panel: rgba(255,255,255,.06);
+      --panel2: rgba(255,255,255,.04);
+      --line: rgba(255,255,255,.10);
+      --text: rgba(255,255,255,.92);
+      --muted: rgba(255,255,255,.68);
+      --muted2: rgba(255,255,255,.54);
+      --brand: #e23744;
+      --brand2:#ff4d5d;
+      --shadow: 0 18px 55px rgba(0,0,0,.38);
+      --radius: 18px;
+      --radius2: 14px;
+      --max: 1120px;
+    }
+
+    *{ box-sizing:border-box; }
+    html, body{ height:100%; }
+    body{
+      margin:0;
+      font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+      color: var(--text);
+      background:
+        radial-gradient(900px 700px at 12% 0%, rgba(226,55,68,.22), transparent 58%),
+        radial-gradient(900px 700px at 88% 10%, rgba(255,77,93,.12), transparent 60%),
+        radial-gradient(900px 700px at 50% 100%, rgba(255,255,255,.07), transparent 55%),
+        var(--bg);
+      -webkit-font-smoothing: antialiased;
+      text-rendering: optimizeLegibility;
+      line-height: 1.55;
+    }
+
+    a{ color: inherit; text-decoration: none; }
+    .wrap{ max-width: var(--max); margin: 0 auto; padding: 0 18px; }
+
+    /* Top Nav */
+    .nav{
+      position: sticky; top:0; z-index: 50;
+      background: rgba(11,11,13,.70);
+      backdrop-filter: blur(14px);
+      border-bottom: 1px solid var(--line);
+    }
+    .nav-inner{
+      display:flex; align-items:center; justify-content:space-between;
+      gap: 14px;
+      padding: 14px 0;
+    }
+    .brand{
+      display:flex; align-items:center; gap: 10px; min-width: 220px;
+    }
+    .logo{
+      width: 42px; height: 42px;
+      border-radius: 14px;
+      display:grid; place-items:center;
+      background: linear-gradient(135deg, var(--brand), var(--brand2));
+      box-shadow: 0 16px 30px rgba(226,55,68,.28);
+      font-weight: 900;
+      letter-spacing: .4px;
+    }
+    .brand .name{ font-weight: 900; letter-spacing: -.2px; }
+    .brand .sub{ font-size: 12px; color: var(--muted); margin-top: 2px; }
+
+    .nav-links{ display:flex; gap: 8px; flex-wrap: wrap; justify-content:center; }
+    .nav-links a{
+      font-size: 13px;
+      font-weight: 800;
+      padding: 9px 12px;
+      border-radius: 999px;
+      border: 1px solid transparent;
+      color: rgba(255,255,255,.86);
+    }
+    .nav-links a:hover{
+      background: rgba(255,255,255,.06);
+      border-color: rgba(255,255,255,.10);
+    }
+
+    .nav-cta{ display:flex; gap: 10px; align-items:center; min-width: 220px; justify-content:flex-end; }
+    .btn{
+      border: 0;
+      cursor: pointer;
+      padding: 10px 14px;
+      border-radius: 999px;
+      font-weight: 900;
+      font-size: 13px;
+      display:inline-flex;
+      gap: 8px;
+      align-items:center;
+      transition: transform .15s ease, filter .15s ease, background .15s ease;
+      user-select:none;
+      white-space:nowrap;
+    }
+    .btn:active{ transform: translateY(1px); }
+    .btn.primary{
+      color: white;
+      background: linear-gradient(135deg, var(--brand), var(--brand2));
+      box-shadow: 0 16px 34px rgba(226,55,68,.25);
+    }
+    .btn.primary:hover{ filter: brightness(1.03); }
+    .btn.ghost{
+      color: rgba(255,255,255,.90);
+      background: rgba(255,255,255,.06);
+      border: 1px solid rgba(255,255,255,.12);
+    }
+    .btn.ghost:hover{ background: rgba(255,255,255,.09); }
+
+    /* Hero */
+    header{
+      padding: 34px 0 18px;
+    }
+    .hero{
+      display:grid;
+      grid-template-columns: 1.25fr .75fr;
+      gap: 16px;
+      align-items: stretch;
+    }
+    .card{
+      background: linear-gradient(180deg, rgba(255,255,255,.07), rgba(255,255,255,.04));
+      border: 1px solid rgba(255,255,255,.10);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      padding: 18px;
+      overflow: hidden;
+      position: relative;
+    }
+    .card::before{
+      content:"";
+      position:absolute; inset:-2px;
+      background:
+        radial-gradient(520px 240px at 15% 0%, rgba(226,55,68,.22), transparent 55%),
+        radial-gradient(520px 260px at 85% 10%, rgba(255,77,93,.14), transparent 60%);
+      opacity: .9;
+      pointer-events:none;
+    }
+    .card > *{ position: relative; z-index: 1; }
+
+    .pill{
+      display:inline-flex;
+      gap: 8px;
+      align-items:center;
+      width: fit-content;
+      padding: 7px 12px;
+      border-radius: 999px;
+      font-weight: 900;
+      font-size: 12px;
+      color: rgba(255,255,255,.94);
+      background: rgba(226,55,68,.16);
+      border: 1px solid rgba(226,55,68,.30);
+    }
+    h1{
+      margin: 12px 0 6px;
+      font-size: 40px;
+      line-height: 1.1;
+      letter-spacing: -0.7px;
+    }
+    .headline{
+      color: rgba(255,255,255,.82);
+      font-weight: 700;
+      margin: 0 0 10px;
+      font-size: 14px;
+    }
+    .summary{
+      margin: 0;
+      color: rgba(255,255,255,.76);
+      font-size: 14px;
+      max-width: 70ch;
+    }
+
+    .meta{
+      display:grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+      margin-top: 14px;
+    }
+    .meta .chip{
+      display:flex;
+      gap: 10px;
+      align-items:flex-start;
+      padding: 10px 12px;
+      border-radius: 14px;
+      background: rgba(255,255,255,.05);
+      border: 1px solid rgba(255,255,255,.10);
+    }
+    .meta .ic{ width: 22px; height:22px; display:grid; place-items:center; opacity:.95; }
+    .meta .t{ font-weight: 950; font-size: 12px; }
+    .meta .d{ font-size: 12px; color: rgba(255,255,255,.68); margin-top: 2px; overflow-wrap:anywhere; }
+
+    .side{
+      display:flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+    .mini{
+      background: linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,.03));
+      border: 1px solid rgba(255,255,255,.10);
+      border-radius: var(--radius);
+      padding: 16px;
+      box-shadow: 0 18px 45px rgba(0,0,0,.26);
+    }
+    .mini h3{
+      margin: 0 0 10px;
+      font-size: 14px;
+      font-weight: 950;
+    }
+    .kv{
+      display:flex;
+      justify-content: space-between;
+      gap: 12px;
+      padding: 8px 0;
+      border-bottom: 1px solid rgba(255,255,255,.08);
+    }
+    .kv:last-child{ border-bottom: 0; }
+    .kv span{ color: var(--muted); font-size: 12px; font-weight: 700; }
+    .kv strong{ font-size: 12px; font-weight: 950; color: rgba(255,255,255,.92); }
+
+    /* Sections */
+    section{ padding: 18px 0; }
+    .section-head{
+      display:flex;
+      align-items:flex-end;
+      justify-content:space-between;
+      gap: 12px;
+      margin: 0 0 12px;
+    }
+    .section-head h2{
+      margin:0;
+      font-size: 20px;
+      letter-spacing: -0.3px;
+      font-weight: 950;
+    }
+    .section-head small{
+      color: var(--muted);
+      font-weight: 800;
+    }
+
+    .grid-2{ display:grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+    .grid-3{ display:grid; grid-template-columns: 1fr 1fr 1fr; gap: 12px; }
+
+    .panel{
+      background: linear-gradient(180deg, rgba(255,255,255,.05), rgba(255,255,255,.03));
+      border: 1px solid rgba(255,255,255,.10);
+      border-radius: var(--radius);
+      padding: 16px;
+      box-shadow: 0 18px 45px rgba(0,0,0,.20);
+    }
+
+    /* Experience cards (Flexbox alignment for title + dates) */
+    .role{
+      display:flex;
+      justify-content:space-between;
+      align-items:flex-start;
+      gap: 12px;
+      margin-bottom: 8px;
+    }
+    .role .left .title{
+      font-weight: 950;
+      font-size: 14px;
+      margin: 0;
+    }
+    .role .left .org{
+      margin-top: 3px;
+      color: var(--muted);
+      font-weight: 800;
+      font-size: 12px;
+    }
+    .role .right{
+      text-align:right;
+      min-width: 120px;
+      color: rgba(255,255,255,.80);
+      font-weight: 900;
+      font-size: 12px;
+      background: rgba(226,55,68,.14);
+      border: 1px solid rgba(226,55,68,.26);
+      padding: 7px 10px;
+      border-radius: 12px;
+      white-space:nowrap;
+      height: fit-content;
+    }
+    ul{
+      margin: 0;
+      padding-left: 18px;
+      color: rgba(255,255,255,.76);
+      font-size: 13px;
+    }
+    li{ margin: 6px 0; }
+    .muted{ color: var(--muted2); }
+
+    /* Skills grid (CSS Grid) */
+    .tags{
+      display:flex;
+      flex-wrap:wrap;
+      gap: 8px;
+      margin-top: 10px;
+    }
+    .tag{
+      font-size: 12px;
+      font-weight: 900;
+      padding: 7px 10px;
+      border-radius: 999px;
+      background: rgba(255,255,255,.06);
+      border: 1px solid rgba(255,255,255,.10);
+      color: rgba(255,255,255,.86);
+    }
+
+    .skill-grid{
+      display:grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 10px;
+      margin-top: 8px;
+    }
+    .skill{
+      border-radius: 16px;
+      padding: 12px;
+      background: rgba(255,255,255,.05);
+      border: 1px solid rgba(255,255,255,.10);
+    }
+    .skill .k{ font-weight: 950; font-size: 12px; margin: 0; }
+    .skill .v{ margin-top: 4px; color: var(--muted); font-size: 12px; font-weight: 700; }
+
+    /* Footer */
+    footer{
+      border-top: 1px solid rgba(255,255,255,.10);
+      padding: 20px 0 28px;
+      color: rgba(255,255,255,.72);
+      margin-top: 10px;
+    }
+
+    /* Responsive */
+    @media (max-width: 980px){
+      .hero{ grid-template-columns: 1fr; }
+      .nav-links{ display:none; }
+      h1{ font-size: 34px; }
+      .meta{ grid-template-columns: 1fr; }
+      .grid-2{ grid-template-columns: 1fr; }
+      .grid-3{ grid-template-columns: 1fr; }
+      .skill-grid{ grid-template-columns: 1fr; }
+      .nav-cta{ min-width: auto; }
+    }
+
+    /* Print */
+    @media print{
+      .nav, .nav-cta .btn.ghost, .nav-cta .btn.primary{ display:none !important; }
+      body{ background: white; color: #111; }
+      .card, .panel, .mini{
+        box-shadow: none;
+        border: 1px solid #ddd;
+        background: #fff;
+      }
+      a{ color: #111; }
+      .tag, .role .right{
+        border: 1px solid #ddd;
+        background: #f6f6f6;
+        color: #111;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="nav">
+    <div class="wrap nav-inner">
+      <div class="brand">
+        <div class="logo">R</div>
+        <div>
+          <div class="name">Nadimpalli V L N Raju</div>
+          <div class="sub">Finance & Business Analytics • BBA</div>
+        </div>
+      </div>
+
+      <div class="nav-links" aria-label="Primary navigation">
+        <a href="#about">Summary</a>
+        <a href="#education">Education</a>
+        <a href="#experience">Experience</a>
+        <a href="#leadership">Leadership</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+      </div>
+
+      <div class="nav-cta">
+        <button class="btn ghost" type="button" onclick="window.print()">Print</button>
+        <a class="btn primary" href="#contact">Contact</a>
+      </div>
+    </div>
+  </div>
+
+  <header>
+    <div class="wrap hero">
+      <div class="card" id="about">
+        <div class="pill">📊 Finance • Business Analytics • Modeling</div>
+        <h1>Nadimpalli V L N Raju</h1>
+        <div class="headline">Finance & business analytics student with experience in financial modeling, P&amp;L forecasting, budgeting, and data analysis.</div>
+        <p class="summary">
+          Proven ability to support strategic decision-making, process optimization, and operational efficiency using Excel, Power BI, SQL, and Python.
+          Experience working with startups and cross-functional teams in fast-paced environments.
+        </p>
+
+        <div class="meta">
+          <div class="chip">
+            <div class="ic">📞</div>
+            <div>
+              <div class="t">Phone</div>
+              <div class="d"><a href="tel:+919347291586">+91 93472 91586</a></div>
+            </div>
+          </div>
+          <div class="chip">
+            <div class="ic">✉️</div>
+            <div>
+              <div class="t">Email</div>
+              <div class="d"><a href="mailto:vln.nadimpalli@gmail.com">vln.nadimpalli@gmail.com</a></div>
+            </div>
+          </div>
+          <div class="chip">
+            <div class="ic">🔗</div>
+            <div>
+              <div class="t">LinkedIn</div>
+              <div class="d"><a href="https://www.linkedin.com/in/vln-raju-nadimpalli" target="_blank" rel="noreferrer">linkedin.com/in/vln-raju-nadimpalli</a></div>
+            </div>
+          </div>
+          <div class="chip">
+            <div class="ic">📍</div>
+            <div>
+              <div class="t">Location</div>
+              <div class="d">Bengaluru, India</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="side">
+        <div class="mini">
+          <h3>Key Strengths</h3>
+          <div class="kv"><span>Focus</span><strong>Financial Modeling</strong></div>
+          <div class="kv"><span>Core</span><strong>P&amp;L • Budgeting • Forecasting</strong></div>
+          <div class="kv"><span>Tools</span><strong>Excel • Power BI • SQL • Python</strong></div>
+        </div>
+
+        <div class="mini" id="contact">
+          <h3>Quick Contact</h3>
+          <div class="kv"><span>Email</span><strong><a href="mailto:vln.nadimpalli@gmail.com">vln.nadimpalli@gmail.com</a></strong></div>
+          <div class="kv"><span>Phone</span><strong><a href="tel:+919347291586">+91 93472 91586</a></strong></div>
+          <div style="display:flex; gap:10px; margin-top:12px; flex-wrap:wrap;">
+            <a class="btn primary" href="mailto:vln.nadimpalli@gmail.com?subject=Resume%20Website%20Enquiry">Email</a>
+            <a class="btn ghost" href="tel:+919347291586">Call</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section id="education">
+      <div class="wrap">
+        <div class="section-head">
+          <h2>Education</h2>
+          <small>Academic background</small>
+        </div>
+
+        <div class="grid-2">
+          <div class="panel">
+            <div class="role">
+              <div class="left">
+                <p class="title" style="margin:0;">Christ University, Bangalore</p>
+                <div class="org">Bachelor of Business Administration (Finance &amp; International Business)</div>
+              </div>
+              <div class="right">2024 – 2027</div>
+            </div>
+            <p class="muted" style="margin:0; font-size:13px;">
+              Coursework aligned with finance, analysis, and business fundamentals.
+            </p>
+          </div>
+
+          <div class="panel">
+            <div class="role">
+              <div class="left">
+                <p class="title" style="margin:0;">Indian Institute of Management, IIM Bangalore</p>
+                <div class="org">Bachelor of Business Administration (Digital Business &amp; Entrepreneurship)</div>
+              </div>
+              <div class="right">2024 – 2027</div>
+            </div>
+            <p class="muted" style="margin:0; font-size:13px;">
+              Focus on digital business, entrepreneurship, and applied analytics.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="experience">
+      <div class="wrap">
+        <div class="section-head">
+          <h2>Relevant Experience</h2>
+          <small>Internships and project roles</small>
+        </div>
+
+        <div class="grid-2">
+          <article class="panel">
+            <div class="role">
+              <div class="left">
+                <p class="title">CIE – IIIT Hyderabad <span class="muted">(Summer Analyst)</span></p>
+                <div class="org">Team: 15</div>
+              </div>
+              <div class="right">Apr 2025 – May 2025</div>
+            </div>
+            <ul>
+              <li>Supported multiple AI startups by improving backend processes and data flows to increase operational efficiency.</li>
+              <li>Built analytical frameworks to help teams allocate resources and automate routine tasks.</li>
+              <li>Worked with founders to study user data and refine business logic for early-stage product scaling.</li>
+              <li>Delivered insights used by leadership to roll out new process-automation practices.</li>
+            </ul>
+          </article>
+
+          <article class="panel">
+            <div class="role">
+              <div class="left">
+                <p class="title">ICLEAN Technologies <span class="muted">(Financial Analyst Intern, Remote)</span></p>
+                <div class="org">Team: 4</div>
+              </div>
+              <div class="right">Oct 2025 – Nov 2025</div>
+            </div>
+            <ul>
+              <li>Created P&amp;L forecasts, cost models, and budget plans to support cleanroom operations.</li>
+              <li>Worked with engineering teams to link financial insights to workflow and planning decisions.</li>
+              <li>Identified cost-saving opportunities and supported process improvements through data analysis.</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="leadership">
+      <div class="wrap">
+        <div class="section-head">
+          <h2>Leadership &amp; Additional Experience</h2>
+          <small>Roles and responsibilities</small>
+        </div>
+
+        <div class="grid-2">
+          <article class="panel">
+            <div class="role">
+              <div class="left">
+                <p class="title">SWO MUNSOC <span class="muted">(Member)</span></p>
+                <div class="org">Team: 15</div>
+              </div>
+              <div class="right">Aug 2024 – Present</div>
+            </div>
+            <ul>
+              <li>Represented committees in multiple MUNs and earned awards for debating and resolution drafting.</li>
+              <li>Supported planning and execution of college-level MUNs, improving event flow and delegate experience.</li>
+              <li>Helped design new committee formats to boost engagement and participation.</li>
+              <li>Guided new members through procedures and preparation.</li>
+            </ul>
+          </article>
+
+          <article class="panel">
+            <div class="role">
+              <div class="left">
+                <p class="title">ACC MUNSOC <span class="muted">(Finance &amp; Outreach Head)</span></p>
+                <div class="org">Team: 7</div>
+              </div>
+              <div class="right">Jul 2022 – Aug 2023</div>
+            </div>
+            <ul>
+              <li>Managed budgeting, expense tracking, and financial planning for MUN events.</li>
+              <li>Secured partnerships and handled outreach to support event funding and participation.</li>
+              <li>Oversaw financial reporting to keep budgets transparent and on track.</li>
+              <li>Ran targeted marketing efforts that improved delegate turnout.</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="skills">
+      <div class="wrap">
+        <div class="section-head">
+          <h2>Skills &amp; Certifications</h2>
+          <small>Tools and competencies</small>
+        </div>
+
+        <div class="grid-2">
+          <div class="panel">
+            <h3 style="margin:0 0 10px; font-size:14px; font-weight:950;">Skills (Structured)</h3>
+            <div class="skill-grid">
+              <div class="skill">
+                <div class="k">Languages</div>
+                <div class="v">Python</div>
+              </div>
+              <div class="skill">
+                <div class="k">Databases</div>
+                <div class="v">SQL, MongoDB, Postgres</div>
+              </div>
+              <div class="skill">
+                <div class="k">Data Visualization</div>
+                <div class="v">Power BI, Tableau</div>
+              </div>
+              <div class="skill">
+                <div class="k">MS Tools</div>
+                <div class="v">Excel, Word, PowerPoint</div>
+              </div>
+              <div class="skill">
+                <div class="k">Tools</div>
+                <div class="v">Git, GitHub</div>
+              </div>
+              <div class="skill">
+                <div class="k">Operating Systems</div>
+                <div class="v">Windows, Linux, macOS</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="panel">
+            <h3 style="margin:0 0 8px; font-size:14px; font-weight:950;">Certifications</h3>
+            <div class="tags">
+              <span class="tag">Microsoft Power BI</span>
+              <span class="tag">Generative AI (Microsoft)</span>
+              <span class="tag">Data Analysis (Microsoft)</span>
+              <span class="tag">Computer Science Engineering (IIT Roorkee)</span>
+            </div>
+
+            <div style="height:12px;"></div>
+            <h3 style="margin:0 0 8px; font-size:14px; font-weight:950;">Interests</h3>
+            <ul>
+              <li>Sports: Former top-50 tennis player in India; university basketball team member (inter-college tournaments).</li>
+              <li>Current affairs: follows geopolitics, trade relations, and regional developments through news and journals.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="projects">
+      <div class="wrap">
+        <div class="section-head">
+          <h2>Projects &amp; Achievements</h2>
+          <small>Competitive work and impact</small>
+        </div>
+
+        <div class="panel">
+          <div class="role">
+            <div class="left">
+              <p class="title">COGNITO <span class="muted">(Inter-College Case Competition — Finalist)</span></p>
+              <div class="org">Team: 2</div>
+            </div>
+            <div class="right">Nov 2025</div>
+          </div>
+          <ul>
+            <li>Built a financial and strategic turnaround for MSG Sports (New York Knicks), covering revenue streams, salary cap, luxury tax, and franchise valuation.</li>
+            <li>Developed AI-driven roster, contract, and cost-optimization models projecting <strong>$450M–$550M</strong> long-term value creation and <strong>$90–120M</strong> annual savings.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <div class="wrap" style="display:flex; justify-content:space-between; gap:12px; flex-wrap:wrap;">
+      <div>
+        <strong style="color:rgba(255,255,255,.90);">Nadimpalli V L N Raju</strong><br/>
+        <small>Finance • Business Analytics • Modeling</small>
+      </div>
+      <div>
+        <small>
+          <a href="mailto:vln.nadimpalli@gmail.com">vln.nadimpalli@gmail.com</a> •
+          <a href="tel:+919347291586">+91 93472 91586</a> •
+          <a href="https://www.linkedin.com/in/vln-raju-nadimpalli" target="_blank" rel="noreferrer">LinkedIn</a>
+        </small>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Smooth scroll for in-page nav links
+    document.querySelectorAll('a[href^="#"]').forEach(a=>{
+      a.addEventListener("click", (e)=>{
+        const id = a.getAttribute("href");
+        if(!id || id === "#") return;
+        const el = document.querySelector(id);
+        if(!el) return;
+        e.preventDefault();
+        el.scrollIntoView({behavior:"smooth", block:"start"});
+      });
+    });
+  </script>
+</body>
+</html>
